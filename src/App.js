@@ -8,7 +8,7 @@ import kp from './keypair.json'
 const arr = Object.values(kp._keypair.secretKey)
 const secret = new Uint8Array(arr)
 const baseAccount = web3.Keypair.fromSecretKey(secret)
-const { SystemProgram, Keypair } = web3
+const { SystemProgram } = web3
 
 const programID = new PublicKey(idl.metadata.address)
 const network = clusterApiUrl('devnet')
@@ -16,12 +16,12 @@ const network = clusterApiUrl('devnet')
 const opts = {
 	preflightCommitment: 'processed',
 }
-const TEST_GIFS = [
-	'https://media.giphy.com/media/qC9DGIsrP6GuensJN4/giphy.gif',
-	'https://media.giphy.com/media/3oriNQePCxOnTR7es8/giphy.gif',
-	'https://media.giphy.com/media/3oriOafgCGbCjVI7S0/giphy.gif',
-	'https://media.giphy.com/media/5bGrGEmksHgldYqFWr/giphy.gif',
-]
+// const TEST_GIFS = [
+// 	'https://media.giphy.com/media/qC9DGIsrP6GuensJN4/giphy.gif',
+// 	'https://media.giphy.com/media/3oriNQePCxOnTR7es8/giphy.gif',
+// 	'https://media.giphy.com/media/3oriOafgCGbCjVI7S0/giphy.gif',
+// 	'https://media.giphy.com/media/5bGrGEmksHgldYqFWr/giphy.gif',
+// ]
 
 // Constants
 const TWITTER_HANDLE = '_buildspace'

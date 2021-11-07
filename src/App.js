@@ -159,7 +159,7 @@ const App = () => {
 					<div className='gif-grid'>
 						{gifList.map((item, index) => (
 							<div className='gif-item' key={index}>
-								<img src={item.gifLink} />
+								<img src={item.gifLink} alt='gif from giphy' />
 							</div>
 						))}
 					</div>
@@ -195,6 +195,7 @@ const App = () => {
 			console.log('Fetching GIF list...')
 			getGifList()
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [walletAddress])
 
 	return (
